@@ -61,11 +61,91 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      body: Center(
 
-          //Aqui fazer o cartão
+
+      
+        body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>(
+          Text(
+            'Naruto Uzumake',
+            style: TextStyle(
+              fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white,
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Row(
+              children: <Widget>
+            )
+            Text('+55 11 98546 5066',
+            style: TextStyle(fontSize: 12, color: Colors.black),
+            ),
+            SizedBox(
+              widht: 15,
+            ),
+            Icon(
+              Icon.email,
+              color: Colors.black,
+            ),
+            SizedBox(
+               widht: 5,
+            )
+          ),
+        ),
+        body: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              Colors.red,
+              Colors.green,
+              Colors.teal,
+            ),
+          ),
+          borderadius: BorderRadius.circular(10),
+        ),
+        child: Stack(
+          children: [
+            Positioned(
+              right: 10,
+               top: 7,
+              child: Container(
+                height: 90,
+                width: 100,
+                child: ClipOval(
+              child: Image.asset(
+                'assets/images/imagem.jpeg',
+              ),
+              ),
+              ),
+            ),
+
+            Positioned(
+              left: 20,
+              top: 25,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    'Naruto Uzumake'
+                     style: TextStyle(
+                    fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white,
+                    ),
+                  )
+                ],
+              ),
+            )
+          ],
+          crossAxisAlignment: CrossAxisAlignment.start,
+        )
+
 
           ),
+
+
+
+
+
+      
       bottomNavigationBar: BottomAppBar(
         //Menu inferior
         color: Theme.of(context).colorScheme.inversePrimary, //Dando a cor
